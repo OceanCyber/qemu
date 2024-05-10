@@ -477,7 +477,12 @@ QEMU_PLUGIN_API
 bool qemu_plugin_mem_is_store(qemu_plugin_meminfo_t info);
 
 /**
- * qemu_plugin_mem_read()
+ * qemu_plugin_mem_read() - read bytes from memory
+ * @addr: virtual address to read from
+ * @buf: buffer to copy bytes into
+ * @len: number of bytes to copy
+ *
+ * Returns: true if the memory read succeeded
  */
 QEMU_PLUGIN_API
 bool qemu_plugin_mem_read(uint64_t addr, void *buf, uint64_t len);
