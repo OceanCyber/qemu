@@ -290,6 +290,10 @@ bool qemu_plugin_mem_is_store(qemu_plugin_meminfo_t info)
     return get_plugin_meminfo_rw(info) & QEMU_PLUGIN_MEM_W;
 }
 
+bool qemu_plugin_mem_read(uint64_t addr, void *buf, uint64_t len) {
+    return cpu_physical_memory_read(addr, buf, len);
+}
+
 /*
  * Virtual Memory queries
  */

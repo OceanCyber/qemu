@@ -477,6 +477,12 @@ QEMU_PLUGIN_API
 bool qemu_plugin_mem_is_store(qemu_plugin_meminfo_t info);
 
 /**
+ * qemu_plugin_mem_read()
+ */
+QEMU_PLUGIN_API
+bool qemu_plugin_mem_read(uint64_t addr, void *buf, uint64_t len);
+
+/**
  * qemu_plugin_get_hwaddr() - return handle for memory operation
  * @info: opaque memory info structure
  * @vaddr: the virtual address of the memory operation
