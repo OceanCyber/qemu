@@ -43,6 +43,7 @@
 #include "exec/exec-all.h"
 #include "exec/gdbstub.h"
 #include "exec/ram_addr.h"
+#include "exec/cpu-common.h"
 #include "disas/disas.h"
 #include "plugin.h"
 #ifndef CONFIG_USER_ONLY
