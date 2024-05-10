@@ -481,11 +481,9 @@ bool qemu_plugin_mem_is_store(qemu_plugin_meminfo_t info);
  * @addr: virtual address to read from
  * @buf: buffer to copy bytes into
  * @len: number of bytes to copy
- *
- * Returns: true if the memory read succeeded
  */
 QEMU_PLUGIN_API
-bool qemu_plugin_mem_read(uint64_t addr, void *buf, uint64_t len);
+void qemu_plugin_mem_read(uint64_t addr, void *buf, uint64_t len);
 
 /**
  * qemu_plugin_get_hwaddr() - return handle for memory operation
